@@ -1,9 +1,0 @@
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-    border: 1px yellow;
-}
-.board{
-    border: 1px solid black;
-}

@@ -11,3 +11,12 @@
     border: 1px black;
     
 }
+.square {
+    border: 1px rgba(0, 0, 0, 0.04) solid;
+    background-color: yellow;
+}
+
+.board.square:hover {
+    background-color: teal;
+}
+    

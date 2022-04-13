@@ -1,15 +1,17 @@
-#container {
+.flex-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
+    flex-direction: column;
     border: 1px yellow;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(231, 19, 143, 0.767), white);
 }
 .board {
     display: grid;
     width: 500px;
     height: 500px;
     border: 1px black;
-    
+   
 }
 .square {
     border: 1px rgba(0, 0, 0, 0.04) solid;
@@ -20,3 +22,22 @@
     background-color: teal;
 }
     
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.userInput {
+    display:flex;
+    justify-content: center;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+}

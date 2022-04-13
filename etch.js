@@ -1,5 +1,5 @@
 console.log("check")
-var currentColor = "yellow"
+var currentColor = "black"
 
 function createGrid(size){ 
   let board = document.querySelector(".board");
@@ -29,13 +29,16 @@ function changeSize(input) {
 function clearGrid() {
   let board = document.querySelector(".board");
   let squares = board.querySelectorAll("div");
-  squares.forEach((div) => (div.style.backgroundColor = "white"));
+  squares.forEach((div) => (div.style.backgroundColor = ""));
 }
 
 createGrid(16)
 
 function colorGrid(){
-  this.style.backgroundColor = currentColor
+
+this.style.backgroundColor = currentColor
+  
+  
 }
 
 function setBlack() {

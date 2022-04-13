@@ -1,11 +1,14 @@
 console.log("check")
 
-function createGrid (size){ 
+function createGrid(size){ 
   let board = document.querySelector(".board");
-  board.style.gridTemplateColumns = "repeat(16, 1fr)";
-  board.style.gridTemplateRows = "repeat(16, 1fr)";
+  let squares = board.querySelectorAll("div");
+  squares.forEach((div) => div.remove());
+  board.style.gridTemplateColumns = (`repeat(${size}, 1fr`);
+  board.style.gridTemplateRows = (`repeat(${size}, 1fr`);
 
-  for (let i = 0; i < 256; i++) {
+  let gridSize = size * size
+  for (let i = 0; i < gridSize; i++) {
     let square = document.createElement("div");
     square.addEventListener('mouseover', () => {
       square.style.backgroundColor = "yellow";

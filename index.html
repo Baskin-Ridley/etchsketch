@@ -13,13 +13,13 @@
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
-                <button>Black</button>
-                <button>White</button>
+                <button onclick="setBlack()">Black</button>
+                <button onclick="setWhite()">White</button>
                 <button>Random</button>
                 <button onClick="clearGrid()">Reset</button>
             </div>
             <div>
-                <input type="text" placeholder="size" value="16">
+                <input type="text" placeholder="size" value="16" onchange="changeSize(this.value)">
                 <button>Set Size</button>
             </div>
         </div>

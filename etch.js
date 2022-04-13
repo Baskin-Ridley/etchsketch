@@ -1,4 +1,5 @@
 console.log("check")
+var currentColor = "yellow"
 
 function createGrid(size){ 
   let board = document.querySelector(".board");
@@ -10,13 +11,20 @@ function createGrid(size){
   let gridSize = size * size
   for (let i = 0; i < gridSize; i++) {
     let square = document.createElement("div");
-    square.addEventListener('mouseover', () => {
-      square.style.backgroundColor = "yellow";
-    })
+    square.addEventListener("mouseover", colorGrid)
     board.insertAdjacentElement("beforeend", square);
   }
 }
 
+function changeSize(input) {
+  if (input >= 2 && input <= 100) {
+    document.querySelector(".error").style.display="none";
+    createGrid(input);
+  }
+  else {
+    document.querySelector(".error").style.display="flex";
+  }
+}
 
 function clearGrid() {
   let board = document.querySelector(".board");
@@ -25,3 +33,15 @@ function clearGrid() {
 }
 
 createGrid(16)
+
+function colorGrid(){
+  this.style.backgroundColor = currentColor
+}
+
+function setBlack() {
+  return currentColor = "black";
+}
+
+function setWhite() {
+  return currentColor = "white";
+}

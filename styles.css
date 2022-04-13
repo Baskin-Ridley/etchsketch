@@ -16,7 +16,7 @@
     background-color: yellow;
 }
 
-.board.square:hover {
+.square:hover {
     background-color: teal;
 }
     
